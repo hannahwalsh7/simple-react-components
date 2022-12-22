@@ -26,9 +26,14 @@ BrandIconStory.argTypes = {
       'occasions_collaboration',
       'occasions_collaboration-2',
       'occasions_disco',
+      'restaurant_cow',
       'restaurant_team-member',
+      'restaurant_tent-2',
       'technology_tablet-and-desktop',
-      'business_quote'
+      'technology_mobile-phone',
+      'business_quote',
+      'business_email',
+      'menu_sandwich-classic-chicken'
     ],
     control: {
       type: 'select',
@@ -40,9 +45,14 @@ BrandIconStory.argTypes = {
         'occasions_collaboration' : 'Occasions | Collaboration',
         'occasions_collaboration-2' : 'Occasions | Collaboration 2',
         'occasions_disco' : 'Occasions | Disco',
+        'restaurant_cow' : 'Restaurant | Cow',
         'restaurant_team-member' : 'Restaurant | Team Member',
+        'restaurant_tent-2' : 'Restaurant | Tent 2',
         'technology_tablet-and-desktop': 'Technology | Tablet and Desktop',
-        'business_quote': 'Business | Quote'
+        'technology_mobile-phone': 'Technology | Mobile Phone',
+        'business_quote': 'Business | Quote',
+        'business_email': 'Business | Email',
+        'menu_sandwich-classic-chicken': 'Menu | Classic Chicken Sandwich'
       },
     },
   },
