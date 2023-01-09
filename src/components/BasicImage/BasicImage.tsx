@@ -9,7 +9,7 @@ export interface BasicImageProps {
 const BasicImage = (props: BasicImageProps) => {
   return (
     <div className="basic-image">
-      <img src={props.image} alt={props.imageAltText} />
+      <img src={props.image} alt={props.imageAltText} title={props.imageAltText} />
     </div>
   );
 };
