@@ -5,7 +5,7 @@ import TeamBioList from './TeamBioList';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: 'React Component Library/Team Bio List',
+  title: 'React Component Library/Team Bio/Team Bio List',
   component: TeamBioList,
 } as ComponentMeta<typeof TeamBioList>;
 

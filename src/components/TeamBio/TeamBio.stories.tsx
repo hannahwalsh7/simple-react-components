@@ -4,7 +4,7 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 import TeamBio from "./TeamBio";
 
 export default {
-  title: "React Component Library/Team Bio",
+  title: "React Component Library/Team Bio/Team Bio",
   component: TeamBio,
 } as ComponentMeta<typeof TeamBio>;
 
