@@ -13,4 +13,23 @@ export default {
 const Template: ComponentStory<typeof RuleDivider> = (args) => <RuleDivider {...args} />;
 
 export const RuleDividerStory = Template.bind({});
+
+RuleDividerStory.argTypes = {
+  color: {
+    name: 'Color',
+    description: 'Rule divider color',
+    options: ['gray', 'secondaryBlue'],
+    control: {
+      type: 'select',
+      labels: {
+        'gray': 'Gray',
+        'secondaryBlue': 'Secondary Blue'
+      },
+    },
+  }
+};
+RuleDividerStory.args = {
+  color: "gray",
+};
+
 RuleDividerStory.storyName = "Rule Divider";

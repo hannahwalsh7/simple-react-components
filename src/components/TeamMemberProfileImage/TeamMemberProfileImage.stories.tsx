@@ -4,7 +4,7 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 import TeamMemberProfileImage from "./TeamMemberProfileImage";
 
 export default {
-    title: "React Component Library/Team Member Profile Image",
+    title: "React Component Library/Team Bio/Team Member Profile Image",
     component: TeamMemberProfileImage,
 } as ComponentMeta<typeof TeamMemberProfileImage>;
 
