@@ -1,0 +1,57 @@
+.team-bio-list-item {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+    @media screen and (min-width: 420px) {
+      width: calc(50% - 16px);
+      max-width: calc(50% - 16px);
+    }
+
+  &__item-text {
+    @media screen and (min-width: 524px) {
+      margin-left: 32px;
+    }
+  }
+
+  &__item-header {
+    color: #80878C;
+    font-family: "Apercu Pro", "Lato", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    margin: 0 0 0 8px;
+    padding-top: 16px;
+    text-align: left;
+
+    @media screen and (min-width: 524px) {
+      font-size: 16px;
+      padding-top: 35px;
+    }
+  }
+
+  &__favorites {
+    color: #5B6770;
+    font-family: "Apercu Pro", "Lato", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    margin: 0 0 0 8px;
+    text-align: left;
+  }
+
+  .brand-icon {
+    padding-top: 16px;
+
+    @media screen and (min-width: 524px) {
+      padding-top: 35px;
+    }
+  }
+
+  .text-link {
+    margin: 0 0 0 8px;
+    text-align: left;
+  }
+}
