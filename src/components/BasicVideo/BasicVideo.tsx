@@ -4,19 +4,32 @@ import "./BasicVideo.scss";
 export interface BasicVideoProps {
   embedId: string;
   videoTitle?: string;
-  controls?: string;
-  autoplay?: string;
+  controls?: boolean;
+  autoplay?: boolean;
   ccLanguagePreference?: string;
-  ccLoad?: string;
+  ccLoad?: boolean;
 }
 
 const BasicVideo = (props: BasicVideoProps) => {  
-  const controls = props.controls ? props.controls : '1'
-  const autoplay = props.autoplay ? props.autoplay : '0'
-  const mute = props.autoplay === '1' ? '1' : '0'
   const ccLanguagePreference = props.ccLanguagePreference ? props.ccLanguagePreference : 'en'
   const hl = props.ccLanguagePreference ? props.ccLanguagePreference : 'en'
-  const ccLoad = props.ccLoad ? props.ccLoad : '0'
+
+  let controls = '1'
+  if(props.controls!==undefined && !props.controls){
+    controls = '0'
+  }
+  
+  let autoplay = '0'
+  let mute = '0'
+  if(props.autoplay!==undefined && props.autoplay){
+    autoplay = '1'
+    mute = '1'
+  }
+
+  let ccLoad = '0'
+  if(props.ccLoad!==undefined && props.ccLoad){
+    ccLoad = '1'
+  }
 
   let videoSource: string = `https://www.youtube.com/embed/${props.embedId}?controls=${controls}&autoplay=${autoplay}&mute=${mute}&cc_lang_pref=${ccLanguagePreference}&hl=${hl}&cc_load_policy=${ccLoad}`;
 

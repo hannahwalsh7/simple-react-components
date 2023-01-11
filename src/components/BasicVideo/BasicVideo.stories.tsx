@@ -5,16 +5,16 @@ import BasicVideo from './BasicVideo';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: 'React Component Library/BasicVideo',
+  title: 'React Component Library/Basic Video',
   component: BasicVideo,
 } as ComponentMeta<typeof BasicVideo>;
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
 const Template: ComponentStory<typeof BasicVideo> = (args) => <BasicVideo {...args} />;
 
-export const VideoStory = Template.bind({});
+export const BasicVideoStory = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
-VideoStory.argTypes = {
+BasicVideoStory.argTypes = {
   embedId: {
     name: 'Embed Code ID',
     control: { type: 'text' },
@@ -27,14 +27,7 @@ VideoStory.argTypes = {
   },
   controls: {
     name: 'Show Video Controls',
-    options: ['1', '0'],
-    control: {
-      type: 'select',
-      labels: {
-        '1': 'Enable',
-        '0': 'Disable'
-      },
-    },
+    control: { type: 'boolean' },
     description: 'Show video controls',
     table: {
       category: 'Controls',
@@ -42,14 +35,7 @@ VideoStory.argTypes = {
   },
   autoplay: {
     name: 'Autoplay',
-    options: ['1', '0'],
-    control: {
-      type: 'select',
-      labels: {
-        '1': 'Enable',
-        '0': 'Disable'
-      },
-    },
+    control: { type: 'boolean' },
     description: 'Autoplay',
     table: {
       category: 'Controls',
@@ -65,14 +51,7 @@ VideoStory.argTypes = {
   },
   ccLoad: {
     name: 'Load Closed Caption on Play',
-    options: ['1', '0'],
-    control: {
-      type: 'select',
-      labels: {
-        '1': 'Enable',
-        '0': 'Disable'
-      },
-    },
+    control: { type: 'boolean' },
     description: 'Load Closed Caption on Play',
     table: {
       category: 'Controls',
@@ -80,13 +59,13 @@ VideoStory.argTypes = {
   },
 }
 
-VideoStory.args = {
+BasicVideoStory.args = {
   embedId: 'qsMpKU5Ld94',
   videoTitle: 'Test Video',
-  controls:'1',
-  autoplay:'1',
-  ccLanguagePreference:'en',
-  ccLoad:'0',
+  controls: true,
+  autoplay: true,
+  ccLanguagePreference: 'en',
+  ccLoad: false,
 };
 
-VideoStory.storyName = "BasicVideo";
+BasicVideoStory.storyName = "BasicVideo";
