@@ -1,0 +1,18 @@
+.basic-image {
+    display: flex;
+
+    img {
+        height: 245px;
+        width: 375px;
+        max-width: 100%;
+        object-fit: cover;
+        margin: auto;
+
+        @media screen and (min-width: 768px) {
+            height: 564px;
+            width: 1048px;
+            max-width: 100%;
+            object-fit: cover;
+        }
+    }
+}
