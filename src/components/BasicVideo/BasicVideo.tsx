@@ -8,27 +8,31 @@ export interface BasicVideoProps {
   autoplay?: boolean;
   ccLanguagePreference?: string;
   ccLoad?: boolean;
-}
+};
 
 const BasicVideo = (props: BasicVideoProps) => {  
-  const ccLanguagePreference = props.ccLanguagePreference ? props.ccLanguagePreference : 'en'
-  const hl = props.ccLanguagePreference ? props.ccLanguagePreference : 'en'
+  if(props.embedId === undefined || props.embedId==='') {
+    throw new Error('Must provide a valid embed id.');
+  }
 
-  let controls = '1'
-  if(props.controls!==undefined && !props.controls){
-    controls = '0'
+  const ccLanguagePreference = props.ccLanguagePreference ? props.ccLanguagePreference : 'en';
+  const hl = props.ccLanguagePreference ? props.ccLanguagePreference : 'en';
+
+  let controls = '1';
+  if(props.controls !== undefined && !props.controls){
+    controls = '0';
   }
   
-  let autoplay = '0'
-  let mute = '0'
-  if(props.autoplay!==undefined && props.autoplay){
-    autoplay = '1'
-    mute = '1'
+  let autoplay = '0';
+  let mute = '0';
+  if(props.autoplay !== undefined && props.autoplay){
+    autoplay = '1';
+    mute = '1';
   }
 
-  let ccLoad = '0'
-  if(props.ccLoad!==undefined && props.ccLoad){
-    ccLoad = '1'
+  let ccLoad = '0';
+  if(props.ccLoad !== undefined && props.ccLoad){
+    ccLoad = '1';
   }
 
   let videoSource: string = `https://www.youtube.com/embed/${props.embedId}?controls=${controls}&autoplay=${autoplay}&mute=${mute}&cc_lang_pref=${ccLanguagePreference}&hl=${hl}&cc_load_policy=${ccLoad}`;

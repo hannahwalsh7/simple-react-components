@@ -43,7 +43,14 @@ BasicVideoStory.argTypes = {
   },
   ccLanguagePreference: {
     name: 'Language Preference',
-    control: { type: 'text' },
+    control: {
+      type: 'select',
+      labels: {
+        'en': 'English',
+        'es': 'Spanish'
+      },
+    },
+    options: ['en', 'es'],
     description: 'Language preference code in ISO 639-1 format',
     table: {
       category: 'Controls',
@@ -57,13 +64,13 @@ BasicVideoStory.argTypes = {
       category: 'Controls',
     },
   },
-}
+};
 
 BasicVideoStory.args = {
   embedId: 'qsMpKU5Ld94',
   videoTitle: 'Test Video',
   controls: true,
-  autoplay: true,
+  autoplay: false,
   ccLanguagePreference: 'en',
   ccLoad: false,
 };
