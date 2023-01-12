@@ -8,9 +8,14 @@ import OccastionsCelebration2Icon from '../../public/icons/brand-icons/occasions
 import OccasionsCollaborationIcon from '../../public/icons/brand-icons/occasions_collaboration.svg';
 import OccasionsCollaboration2Icon from '../../public/icons/brand-icons/occasions_collaboration-2.svg';
 import OccasionsDiscoIcon from '../../public/icons/brand-icons/occasions_disco.svg';
+import RestaurantCowIcon from '../../public/icons/brand-icons/restaurant_cow.svg';
 import RestaurantTeamMemberIcon from '../../public/icons/brand-icons/restaurant_team-member.svg';
+import RestaurantTent2Icon from '../../public/icons/brand-icons/restaurant_tent-2.svg';
 import TechnologyTabletAndDesktopIcon from '../../public/icons/brand-icons/technology_tablet-and-desktop.svg';
+import TechnologyMobilePhoneIcon from '../../public/icons/brand-icons/technology_mobile-phone.svg';
 import BusinessQuoteIcon from '../../public/icons/brand-icons/business_quote.svg';
+import BusinessEmailIcon from '../../public/icons/brand-icons/business_email.svg';
+import MenuSandwichClassicChickenIcon from '../../public/icons/brand-icons/menu_sandwich-classic-chicken.svg';
 
 
 export interface BrandIconProps {
@@ -35,12 +40,22 @@ const BrandIcon = (props: BrandIconProps) => {
         return <OccasionsCollaboration2Icon />;
       case 'occasions_disco':
         return <OccasionsDiscoIcon />;
+      case 'restaurant_cow':
+        return <RestaurantCowIcon />;
       case 'restaurant_team-member':
         return <RestaurantTeamMemberIcon />;
+      case 'restaurant_tent-2':
+        return <RestaurantTent2Icon />;
       case 'technology_tablet-and-desktop':
         return <TechnologyTabletAndDesktopIcon />;
+      case 'technology_mobile-phone':
+        return <TechnologyMobilePhoneIcon />;
       case 'business_quote':
         return <BusinessQuoteIcon />;
+      case 'business_email':
+        return <BusinessEmailIcon />;
+      case 'menu_sandwich-classic-chicken':
+        return <MenuSandwichClassicChickenIcon />;
       default:
         return "";
     }

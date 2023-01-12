@@ -1,0 +1,11 @@
+.team-bio-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 16px 0;
+
+  @media screen and (min-width: 524px) {
+    margin: 0 18px 0;
+  }
+}

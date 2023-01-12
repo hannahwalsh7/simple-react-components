@@ -7,7 +7,8 @@ export interface TeamBioProps {
   teamMemberImage: string;
   teamMemberName: string;
   teamMemberTitle?: string;
-  linkUrl: string;
+  useLink?: boolean;
+  linkUrl?: string;
 }
 
 const TeamBio = (props: TeamBioProps) => {
@@ -16,7 +17,7 @@ const TeamBio = (props: TeamBioProps) => {
       <TeamMemberProfileImage teamMemberImage={props.teamMemberImage} />
       <p className="team-bio__team-member-name">{props.teamMemberName}</p>
       <p className="team-bio__team-member-title">{props.teamMemberTitle}</p>
-      <TextLink linkUrl={props.linkUrl} linkText={"View bio"} />      
+      {props.useLink ? <TextLink linkUrl={props.linkUrl} linkText={"View bio"} /> : ""}
     </div>
   );
 };
