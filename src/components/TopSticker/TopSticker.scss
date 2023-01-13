@@ -4,6 +4,11 @@
   width: 70px;
   height: 70px;
 
+  @media screen and (min-width: 768px) {
+    width: 126px;
+    height: 126px;
+  }
+
   &--primaryWhite {
     background-color: rgb(255, 255, 255);
   }
@@ -15,5 +20,11 @@
   .logo-icon {
     margin-left: -2px;
     margin-top: -2px;
+
+    @media screen and (min-width: 768px) {
+      // Need to adjust with bigger icon
+      margin-left: 27px;
+      margin-top: 27px;
+    }
   }
 }
