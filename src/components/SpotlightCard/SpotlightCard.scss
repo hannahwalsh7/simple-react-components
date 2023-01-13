@@ -38,6 +38,7 @@
       color: #5b6770;
       font-family: 'Apercu Pro', 'Lato', sans-serif;
       font-style: normal;
+      margin-bottom: 50px;
 
         &-container {
             width: 55%;
@@ -75,7 +76,16 @@
         font-weight: 400;
         font-size: 18px;
         line-height: 24px;
-        margin: 30px 0 16px 0;
+        margin: 30px 50px 00px 0px;
+      }
+
+      a {
+        color: #004f71;
+      }
+
+      a:hover {
+        font-weight: bolder;
+        cursor: pointer;
       }
   
       &--center {
