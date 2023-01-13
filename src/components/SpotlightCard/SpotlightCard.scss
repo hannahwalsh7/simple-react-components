@@ -4,21 +4,20 @@
     border: 1px solid #CCCFD0;
     box-shadow: 0px 2px 4px rgba(91, 103, 112, 0.24);
     max-width: 100%;
-    width: 80%;//calc(100% - 40px);
+    width: 80%; //calc(100% - 40px);
     margin: 20px 20px 20px 20px;
     display: flex;
     flex-direction: row;
   
     @media screen and (max-width: 767px) {
       margin: 0 auto;
-      max-width: 832px;
       flex-direction: column;
     }
   
     img {
         display: inline-block;
-        width: 200px;
-        height: 200px;
+        width: 250px;
+        height: 250px;
         border-radius: 50%;
         border: 5px solid black;
         margin-top: 50px;
@@ -28,13 +27,12 @@
         background-size: cover;
   
         @media screen and (max-width: 767px) {
-            width: 75px;
-            height: 75px;
+            width: 150px;
+            height: 150px;
         }
     }
   
     &__content {
-    //   padding: 8px 16px 16px;
       color: #5b6770;
       font-family: 'Apercu Pro', 'Lato', sans-serif;
       font-style: normal;
@@ -46,7 +44,9 @@
             float: right;
 
             @media screen and (max-width: 767px) {
-                width: 100%;;
+                width: 100%;
+                min-height: 200px;
+                text-align: center;
             }
         }
   
@@ -63,6 +63,10 @@
         &--secondaryBlue {
           color: #004f71;
         }
+
+        @media screen and (max-width: 767px) {
+            font-size: 28px;
+        }
       }
     
       h2 {
@@ -70,13 +74,22 @@
         font-size: 22px;
         line-height: 12px;
         margin-top: 0px;
+
+        @media screen and (max-width: 767px) {
+            font-size: 18px;
+        }
       }
     
       p {
         font-weight: 400;
         font-size: 18px;
         line-height: 24px;
-        margin: 30px 50px 00px 0px;
+        margin: 30px 50px 0px 0px;
+
+        @media screen and (max-width: 767px) {
+            margin: 30px 15px 0px 15px;
+            font-size: 14px;
+        }
       }
 
       a {
@@ -112,19 +125,10 @@
         text-align: center;
 
         @media screen and (max-width: 767px) {
-            width: 100%;;
+            width: 100%;
+            min-height: 200px;
         }
     }
-
-    // &__content-container {
-    //     width: 55%;
-    //     min-height: 300px;
-    //     float: right;
-
-    //     @media screen and (max-width: 767px) {
-    //         width: 100%;;
-    //     }
-    // }
 }
   
 .mt {

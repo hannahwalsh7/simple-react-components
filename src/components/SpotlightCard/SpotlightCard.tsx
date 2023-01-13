@@ -19,7 +19,7 @@ const SpotlightCard = (props: SpotlightCardProps) => {
     const [readToggleText, setReadToggleText] = useState('');
 
     const textLinkText = 'Meet the Leadership Team';
-    const substringLength = 250;
+    const substringLength = 385;
 
     useEffect(() => {
         if(props.description !== undefined){
@@ -71,9 +71,6 @@ const SpotlightCard = (props: SpotlightCardProps) => {
                 :null}
                 {props.textLink ? <TextLink linkUrl={props.textLink} linkText={textLinkText}/> : null}
             </div>
-            
-
-            
         </div>
       </div>
     );
