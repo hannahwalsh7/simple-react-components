@@ -8,11 +8,12 @@ describe("SpotlightCard", () => {
         render(
             <SpotlightCard
             title="Test Title"
-            imageSource="https://icons.veryicon.com/png/o/internet--web/55-common-web-icons/person-4.png"
+            image="https://icons.veryicon.com/png/o/internet--web/55-common-web-icons/person-4.png"
             imageAltText="Test alt text"
             subtitle="Test Subtitle"
             description="Test description"
-            textLink="Test link"
+            linkUrl="Test link"
+            linkText="Meet the Leadership Team"
             halfWidth={false}
         />);
     });
@@ -31,7 +32,8 @@ describe("SpotlightCard", () => {
             imageAltText="Test alt text"
             subtitle="Test Subtitle"
             description="Test description"
-            textLink="Test link"
+            linkUrl="Test link"
+            linkText="Meet the Leadership Team"
             halfWidth={false}
         />);
     });
@@ -40,10 +42,11 @@ describe("SpotlightCard", () => {
         render(
             <SpotlightCard
             title="Test Title"
-            imageSource="https://icons.veryicon.com/png/o/internet--web/55-common-web-icons/person-4.png"
+            image="https://icons.veryicon.com/png/o/internet--web/55-common-web-icons/person-4.png"
             subtitle="Test Subtitle"
             description="Test description"
-            textLink="Test link"
+            linkUrl="Test link"
+            linkText="Meet the Leadership Team"
             halfWidth={false}
         />);
     });
@@ -52,10 +55,11 @@ describe("SpotlightCard", () => {
         render(
             <SpotlightCard
             title="Test Title"
-            imageSource="https://icons.veryicon.com/png/o/internet--web/55-common-web-icons/person-4.png"
+            image="https://icons.veryicon.com/png/o/internet--web/55-common-web-icons/person-4.png"
             imageAltText="Test alt text"
             description="Test description"
-            textLink="Test link"
+            linkUrl="Test link"
+            linkText="Meet the Leadership Team"
             halfWidth={false}
         />);
     });
@@ -64,34 +68,50 @@ describe("SpotlightCard", () => {
         render(
             <SpotlightCard
             title="Test Title"
-            imageSource="https://icons.veryicon.com/png/o/internet--web/55-common-web-icons/person-4.png"
+            image="https://icons.veryicon.com/png/o/internet--web/55-common-web-icons/person-4.png"
             imageAltText="Test alt text"
             subtitle="Test Subtitle"
-            textLink="Test link"
+            linkUrl="Test link"
+            linkText="Meet the Leadership Team"
             halfWidth={false}
         />);
     });
 
-    test("renders the SpotlightCard component without text link", () => {
+    test("renders the SpotlightCard component without link url", () => {
         render(
             <SpotlightCard
             title="Test Title"
-            imageSource="https://icons.veryicon.com/png/o/internet--web/55-common-web-icons/person-4.png"
+            image="https://icons.veryicon.com/png/o/internet--web/55-common-web-icons/person-4.png"
             imageAltText="Test alt text"
             subtitle="Test Subtitle"
             description="Test description"
+            linkText="Meet the Leadership Team"
             halfWidth={false}
         />);
     });
 
-    test("renders the SpotlightCard component without halfWidth true", () => {
+    test("renders the SpotlightCard component without link text", () => {
         render(
             <SpotlightCard
             title="Test Title"
-            imageSource="https://icons.veryicon.com/png/o/internet--web/55-common-web-icons/person-4.png"
+            image="https://icons.veryicon.com/png/o/internet--web/55-common-web-icons/person-4.png"
+            imageAltText="Test alt text"
+            subtitle="Test Subtitle"
+            linkUrl="Test link"
+            halfWidth={false}
+        />);
+    });
+
+    test("renders the SpotlightCard component with halfWidth true", () => {
+        render(
+            <SpotlightCard
+            title="Test Title"
+            image="https://icons.veryicon.com/png/o/internet--web/55-common-web-icons/person-4.png"
             imageAltText="Test alt text"
             subtitle="Test Subtitle"
             description="Test description"
+            linkUrl="Test link"
+            linkText="Meet the Leadership Team"
             halfWidth={true}
         />);
     });
@@ -100,11 +120,11 @@ describe("SpotlightCard", () => {
         render(
             <SpotlightCard
             title="Test Title"
-            imageSource="https://icons.veryicon.com/png/o/internet--web/55-common-web-icons/person-4.png"
+            image="https://icons.veryicon.com/png/o/internet--web/55-common-web-icons/person-4.png"
             imageAltText="Test alt text"
             subtitle="Test Subtitle"
             description="Test description"
-            textLink="Test link"
+            linkUrl="Test link"
         />);
 
         const readMoreToggle = screen.queryByText('Read More');
@@ -117,11 +137,11 @@ describe("SpotlightCard", () => {
         render(
             <SpotlightCard
             title="Test Title"
-            imageSource="https://icons.veryicon.com/png/o/internet--web/55-common-web-icons/person-4.png"
+            image="https://icons.veryicon.com/png/o/internet--web/55-common-web-icons/person-4.png"
             imageAltText="Test alt text"
             subtitle="Test Subtitle"
             description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-            textLink="Test link"
+            linkUrl="Test link"
         />);
 
         let readMoreToggle = screen.queryByText('Read More');

@@ -23,7 +23,7 @@ SpotlightCardStory.argTypes = {
     },
   },
   subtitle: {
-    name: 'Subitle',
+    name: 'Subtitle',
     control: { type: 'text' },
     table: {
       category: 'Text',
@@ -36,8 +36,8 @@ SpotlightCardStory.argTypes = {
       category: 'Text',
     },
   },
-  imageSource: {
-    name: 'Image Source',
+  image: {
+    name: 'Image',
     control: { type: 'text' },
     table: {
         category: 'Image'
@@ -50,11 +50,20 @@ SpotlightCardStory.argTypes = {
         category: 'Image'
     }
   },
-  textLink: {
-    name: 'Text Link',
-    control: { type: 'text' },
+  linkUrl: {
+    name: "Link Url",
+    control: { type: "text" },
+    description: "Url for Link",
     table: {
-        category: 'Links'
+      category: 'Text Link'
+    }
+  },
+  linkText: {
+    name: 'Link text',
+    control: { type: 'text' },
+    description: 'Link text',
+    table: {
+      category: 'Text Link'
     }
   },
   halfWidth: {
@@ -69,11 +78,12 @@ SpotlightCardStory.argTypes = {
 const description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.';
 SpotlightCardStory.args = {
     title: 'Test Title',
-    imageSource: 'https://icons.veryicon.com/png/o/internet--web/55-common-web-icons/person-4.png',
+    image: 'https://icons.veryicon.com/png/o/internet--web/55-common-web-icons/person-4.png',
     imageAltText: 'Test alt text',
     subtitle: 'Test subtitle',
     description: description,
-    textLink: 'Test link',
+    linkUrl: 'Test link',
+    linkText: 'Meet the Leadership Team',
     halfWidth: true
 };
 
