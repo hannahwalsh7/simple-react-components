@@ -13,6 +13,7 @@ describe("SpotlightCard", () => {
             subtitle="Test Subtitle"
             description="Test description"
             textLink="Test link"
+            halfWidth={false}
         />);
     });
 
@@ -31,6 +32,7 @@ describe("SpotlightCard", () => {
             subtitle="Test Subtitle"
             description="Test description"
             textLink="Test link"
+            halfWidth={false}
         />);
     });
 
@@ -42,6 +44,7 @@ describe("SpotlightCard", () => {
             subtitle="Test Subtitle"
             description="Test description"
             textLink="Test link"
+            halfWidth={false}
         />);
     });
 
@@ -53,6 +56,7 @@ describe("SpotlightCard", () => {
             imageAltText="Test alt text"
             description="Test description"
             textLink="Test link"
+            halfWidth={false}
         />);
     });
 
@@ -64,6 +68,7 @@ describe("SpotlightCard", () => {
             imageAltText="Test alt text"
             subtitle="Test Subtitle"
             textLink="Test link"
+            halfWidth={false}
         />);
     });
 
@@ -75,6 +80,19 @@ describe("SpotlightCard", () => {
             imageAltText="Test alt text"
             subtitle="Test Subtitle"
             description="Test description"
+            halfWidth={false}
+        />);
+    });
+
+    test("renders the SpotlightCard component without halfWidth true", () => {
+        render(
+            <SpotlightCard
+            title="Test Title"
+            imageSource="https://icons.veryicon.com/png/o/internet--web/55-common-web-icons/person-4.png"
+            imageAltText="Test alt text"
+            subtitle="Test Subtitle"
+            description="Test description"
+            halfWidth={true}
         />);
     });
 
