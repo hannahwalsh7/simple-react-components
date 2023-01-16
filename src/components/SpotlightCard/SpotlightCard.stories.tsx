@@ -56,6 +56,13 @@ SpotlightCardStory.argTypes = {
     table: {
         category: 'Links'
     }
+  },
+  halfWidth: {
+    name: 'Half Width',
+    control: { type: 'boolean' },
+    table: {
+      category: 'Card Dimensions'
+    }
   }
 };
 
@@ -66,7 +73,8 @@ SpotlightCardStory.args = {
     imageAltText: 'Test alt text',
     subtitle: 'Test subtitle',
     description: description,
-    textLink: 'Test link'
+    textLink: 'Test link',
+    halfWidth: true
 };
 
 SpotlightCardStory.storyName = "Spotlight Card";
