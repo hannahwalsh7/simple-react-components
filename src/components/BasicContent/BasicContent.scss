@@ -1,0 +1,40 @@
+.basic-content-container {
+    max-width: 100%;
+    width: 100%;
+    font-family: 'Apercu Pro', 'Lato', sans-serif;
+    font-style: normal;
+    padding: 20px 0px 20px 0px;
+
+    &-content-padding {
+        padding: 0px 15px 0px 15px;
+    }
+
+    &-cta-button {
+        margin-left: 15px;
+    }
+
+    &-media {
+        margin-bottom: 15px;
+    }
+
+    h2 {
+        color: #dd0031;
+        margin: 0px;
+    }
+
+    h3 {
+        color: #3EB1C8;
+    }
+
+    p {
+        color: #5b6770;
+    }
+}
+
+.bg-white {
+    background-color: #FFFFFF;  
+}
+
+.bg-tan {
+    background-color: #F5E3CC66;
+}
