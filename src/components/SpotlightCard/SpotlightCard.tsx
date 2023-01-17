@@ -58,12 +58,12 @@ const SpotlightCard = (props: SpotlightCardProps) => {
         </div>
         <div className={`spotlight-card__content-container ${halfWidth ? 'spotlight-card__content-container-half-width' : 'spotlight-card__content-container-regular'}`}>
             <div className="spotlight-card__content">
-                <h1 className="spotlight-card__content-title" data-epi-edit="Title">
+                <h2 className="spotlight-card__content-title" data-epi-edit="Title">
                     {props.title}
-                </h1>
-                <h2 className="spotlight-card__content">
-                    {props.subtitle}
                 </h2>
+                <h3>
+                    {props.subtitle}
+                </h3>
                 {props.description !== undefined ? 
                     <>
                         <p className={`spotlight-card__content spotlight-card__content-p ${halfWidth ? 'spotlight-card__content-p-half-width' : 'spotlight-card__content-p-regular'}`}>
