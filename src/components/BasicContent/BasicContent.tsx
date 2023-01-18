@@ -42,7 +42,7 @@ const BasicContent = (props: BasicContentProps) => {
     return (
         <div className={`basic-content-container ${backgroundColor}`}>
             {props.image ? 
-                <div className='basic-content-container-content-padding basic-content-container-media'>
+                <div className='basic-content-container-img'>
                     <BasicImage 
                         image={props.image}
                         imageAltText={props.imageAltText}
@@ -51,7 +51,7 @@ const BasicContent = (props: BasicContentProps) => {
             : null}
 
             {props.video ? 
-                <div className='basic-content-container-content-padding basic-content-container-media'>
+                <div className='basic-content-container-video'>
                     <BasicVideo 
                         embedId={props.video}
                         videoTitle={props.videoTitle}
@@ -63,13 +63,13 @@ const BasicContent = (props: BasicContentProps) => {
                 </div>
             : null}
 
-            <h2 className='basic-content-container-content-padding'>{title}</h2>
-            <p className='basic-content-container-content-padding'>{subtitle}</p>
-            <h3 className='basic-content-container-content-padding'>{subsectionHeader}</h3>
-            <p className='basic-content-container-content-padding'>{subsectionDescription}</p>
+            <h2 className='basic-content-container-content-styling'>{title}</h2>
+            <p className='basic-content-container-content-styling'>{subtitle}</p>
+            <h3 className='basic-content-container-content-styling'>{subsectionHeader}</h3>
+            <p className='basic-content-container-content-styling'>{subsectionDescription}</p>
             
             {props.CTAlabel ? 
-                <div className='basic-content-container-content-padding'>
+                <div className='basic-content-container-content-styling'>
                     {/* NOTE: default styling is incorrect per AC, will be fixed when we use the CTA component */}
                     <Button 
                         label={props.CTAlabel} 
