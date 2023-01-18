@@ -1,0 +1,55 @@
+.page-header-new {
+   margin: 0 auto;
+   padding: 24px 0 0;
+
+   &__text-container {
+      padding: 0 15px;
+      box-sizing: border-box;
+      width: 100%;
+      margin: auto;
+
+      @media screen and (min-width: 768px) {
+         display: flex;
+         max-width: 1048px;
+         padding: 0 48px;
+         align-items: center;
+         box-sizing: border-box;
+      }
+   }
+
+   &__title {
+      color: #5B6770;
+      font-family: "Apercu Pro", "Lato", sans-serif;
+      font-style: normal;
+      font-size: 32px;
+      line-height: 40px;
+      font-weight: 700;
+      margin: 0;
+      width: 50%;
+      
+      @media screen and (min-width: 768px) {
+         font-size: 48px;
+         line-height: 56px;
+         // Right margin is space betweeen title and subtitle as a percentage of the text container
+         margin: 0 11.345% 0 0;
+      }
+   }
+
+   &__subtitle {
+      color: #5B6770;
+      font-family: 'Apercu Pro', 'Lato', sans-serif;
+      font-style: normal;
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 500;
+      margin: 16px 0 0 0;
+      width: 50%;
+
+      @media screen and (min-width: 768px) {
+         font-size: 24px;
+         line-height: 32px;
+         font-weight: 700;
+         margin: 0;
+      }
+   }
+}

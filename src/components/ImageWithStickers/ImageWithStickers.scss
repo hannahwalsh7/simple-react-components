@@ -1,9 +1,12 @@
 .image-with-stickers {
-    display: flex;
     position: relative;
     padding: 35px 0 48px;
-    max-width: 832px;
-    margin: 0 auto;
+    max-width: 1048px;
+    margin: 35px auto 0;
+
+    &--remove-image {
+        margin: 0;
+    }
 
     &--remove-top-sticker {
         padding-top: 0;
@@ -13,21 +16,16 @@
         padding-bottom: 0;
     }
 
-    img {
-        height: 196px;
-        width: 100%;
-        max-width: 100%;
-        object-fit: cover;
+    @media screen and (min-width: 768px) {
+        padding: 63px 0 80px;
+        margin-top: 41px;
 
-        @media screen and (min-width: 425px) {
-            height: 250px;
+        &--remove-image {
+            margin: 0;
         }
 
-        @media screen and (min-width: 550px) {
-            height: auto;
-            margin: auto;
-            max-width: 100%;
-            width: 832px;
+        &--remove-bottom-sticker {
+            padding-bottom: 0;
         }
     }
 
@@ -35,11 +33,19 @@
         position: absolute;
         left: 20px;
         top: 0;
+
+        @media screen and (min-width: 768px) {
+            left: 137px;
+        }
     }
 
     .bottom-sticker {
         position: absolute;
         right: 16px;
         bottom: 0;
+
+        @media screen and (min-width: 768px) {
+            right: 123px;
+        }
     }
 }

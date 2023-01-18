@@ -4,6 +4,11 @@
   width: 96px;
   height: 96px;
 
+  @media screen and (min-width: 768px) {
+    width: 160px;
+    height: 160px;
+  }
+
   &--primaryRed {
     background-color: #DD0031;
   }
@@ -23,5 +28,11 @@
   .brand-icon {
     margin-left: 5px;
     margin-top: 4px;
+
+    @media screen and (min-width: 768px) {
+      // Need to adjust with bigger icon
+      margin-left: 37px;
+      margin-top: 38px;
+    }
   }
 }
