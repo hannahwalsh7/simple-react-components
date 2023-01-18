@@ -5,7 +5,7 @@ import FullWidthImage from './FullWidthImage';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: 'React Component Library/Full Width Image',
+  title: 'Outdated/Full Width Image',
   component: FullWidthImage,
 } as ComponentMeta<typeof FullWidthImage>;
 

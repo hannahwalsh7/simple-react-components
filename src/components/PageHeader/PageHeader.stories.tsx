@@ -5,7 +5,7 @@ import PageHeader from './PageHeader';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-    title: 'React Component Library/Page Header',
+    title: 'Outdated/Page Header',
     component: PageHeader,
 } as ComponentMeta<typeof PageHeader>;
 
