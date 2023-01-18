@@ -51,13 +51,11 @@ const SpotlightCard = (props: SpotlightCardProps) => {
     }, [expanded])
     
     return (
-      <div className={`spotlight-card mt mb ${props.halfWidth ? 'spotlight-card-half-width' : ''}`}>
-        {/* <div className={`spotlight-card__img-container ${props.halfWidth ? 'spotlight-card__img-container-half-width' : ''}`} id='img-container'> */}
-        <div className='spotlight-card__img-container' id='container'>
+      <div className={`spotlight-card ${props.halfWidth ? 'spotlight-card-half-width' : ''}`}>
+        <div className='spotlight-card__img-container'>
             {props.image ? <TeamMemberProfileImage teamMemberImage={props.image}/> : null}
         </div>
-        {/* <div className={`spotlight-card__content-container ${props.halfWidth ? 'spotlight-card__content-container-half-width' : ''}`} id='container'> */}
-        <div className='spotlight-card__content-container' id='container'>
+        <div className='spotlight-card__content-container'>
             <div className="spotlight-card__content">
                 <h2 className="spotlight-card__content-title" data-epi-edit="Title">
                     {props.title}
@@ -67,8 +65,7 @@ const SpotlightCard = (props: SpotlightCardProps) => {
                 </h3>
                 {props.description !== undefined ? 
                     <>
-                        {/* <p className={`spotlight-card__content spotlight-card__content-p ${props.halfWidth ? 'spotlight-card__content-p-half-width' : ''}`}> */}
-                        <p className='spotlight-card__content spotlight-card__content-p' id='content-p'>
+                        <p className='spotlight-card__content spotlight-card__content-p'>
                             {description} {showReadToggle ? <a onClick={() => setExpanded(!expanded)}>{readToggleText}</a> : null }
                         </p> 
                     </>

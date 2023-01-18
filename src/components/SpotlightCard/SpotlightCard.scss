@@ -20,14 +20,21 @@
         flex-direction: column;
       }
 
-      #container {
+      .spotlight-card__content-container {
         @media screen and (min-width: 768px) {
           width: 100%;
           text-align: center;
         }
       }
 
-      #content-p {
+      .spotlight-card__img-container {
+        @media screen and (min-width: 768px) {
+          width: 100%;
+          text-align: center;
+        }
+      }
+
+      .spotlight-card__content-p {
         @media screen and (min-width: 768px) {
           margin: 30px 15px 20px 15px;  
         }
@@ -51,13 +58,6 @@
               float: right;
               text-align: left;
             }
-
-            // &-half-width{
-            //   @media screen and (min-width: 768px) {
-            //     width: 100%;
-            //     text-align: center;
-            //   }
-            // }
         }
   
         &-title {
@@ -93,12 +93,6 @@
             margin: 30px 50px 20px 0px;
             font-size: 18px;
           }
-          
-          // &-half-width{
-          //   @media screen and (min-width: 768px) {
-          //     margin: 30px 15px 20px 15px;  
-          //   }
-          // }
         }
 
         a {
@@ -121,62 +115,22 @@
           width: 45%;
           min-height: 300px;
         }
+    }
 
-        // &-half-width {
-        //   @media screen and (min-width: 768px) {
-        //     width: 100%;
-        //     text-align: center;
-        //   }
-        // }
+    .team-member-profile-image {
+      margin: 0 auto;
+      margin-top: 50px;
+    
+      @media screen and (min-width: 768px) {
+        width: 250px !important;
+        height: 250px !important;
+      }
+    
+      &__img {
+        @media screen and (min-width: 768px) {
+          width: 219px !important;
+          height: 219px !important;
+        }
+      }
     }
 }
-  
-.mt {
-    margin-top: 32px !important;
-
-    @media screen and (max-width: 1199px) {
-        margin-top: 32px !important;
-    }
-
-    @media screen and (max-width: 991px) {
-        margin-top: 16px !important;
-    }
-
-    @media screen and (max-width: 767px) {
-        margin-top: 8px !important;
-    }
-}
-  
-.mb {
-    margin-bottom: 32px !important;
-
-    @media screen and (max-width: 1199px) {
-        margin-bottom: 32px !important;
-    }
-
-    @media screen and (max-width: 991px) {
-        margin-bottom: 16px !important;
-    }
-
-    @media screen and (max-width: 767px) {
-        margin-bottom: 8px !important;
-    }
-}
-
-.team-member-profile-image {
-  margin: 0 auto;
-  margin-top: 50px;
-
-  @media screen and (min-width: 768px) {
-    width: 250px !important;
-    height: 250px !important;
-  }
-
-  &__img {
-    @media screen and (min-width: 768px) {
-      width: 219px !important;
-      height: 219px !important;
-    }
-  }
-}
-  
