@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./SpotlightCard.scss";
 import TextLink from "../TextLink";
+import TeamMemberProfileImage from "../TeamMemberProfileImage";
 
 export interface SpotlightCardProps {
     title: string;
@@ -21,8 +22,6 @@ const SpotlightCard = (props: SpotlightCardProps) => {
     const [readToggleText, setReadToggleText] = useState('');
 
     const substringLength = 385;
-    const desktop = window.innerHeight >= 768 && window.innerWidth >= 768;
-    const halfWidth = props.halfWidth !== undefined || desktop ? props.halfWidth : false;
 
     useEffect(() => {
         if(props.description !== undefined){
@@ -52,11 +51,13 @@ const SpotlightCard = (props: SpotlightCardProps) => {
     }, [expanded])
     
     return (
-      <div className={`spotlight-card mt mb ${halfWidth ? 'spotlight-card-half-width' : 'spotlight-card-regular'}`}>
-        <div className={`spotlight-card__img-container ${halfWidth ? 'spotlight-card__img-container-half-width' : 'spotlight-card__img-container-regular'}`}>
-            <img src={props.image} alt={props.imageAltText}/>
+      <div className={`spotlight-card mt mb ${props.halfWidth ? 'spotlight-card-half-width' : ''}`}>
+        {/* <div className={`spotlight-card__img-container ${props.halfWidth ? 'spotlight-card__img-container-half-width' : ''}`} id='img-container'> */}
+        <div className='spotlight-card__img-container' id='container'>
+            {props.image ? <TeamMemberProfileImage teamMemberImage={props.image}/> : null}
         </div>
-        <div className={`spotlight-card__content-container ${halfWidth ? 'spotlight-card__content-container-half-width' : 'spotlight-card__content-container-regular'}`}>
+        {/* <div className={`spotlight-card__content-container ${props.halfWidth ? 'spotlight-card__content-container-half-width' : ''}`} id='container'> */}
+        <div className='spotlight-card__content-container' id='container'>
             <div className="spotlight-card__content">
                 <h2 className="spotlight-card__content-title" data-epi-edit="Title">
                     {props.title}
@@ -66,7 +67,8 @@ const SpotlightCard = (props: SpotlightCardProps) => {
                 </h3>
                 {props.description !== undefined ? 
                     <>
-                        <p className={`spotlight-card__content spotlight-card__content-p ${halfWidth ? 'spotlight-card__content-p-half-width' : 'spotlight-card__content-p-regular'}`}>
+                        {/* <p className={`spotlight-card__content spotlight-card__content-p ${props.halfWidth ? 'spotlight-card__content-p-half-width' : ''}`}> */}
+                        <p className='spotlight-card__content spotlight-card__content-p' id='content-p'>
                             {description} {showReadToggle ? <a onClick={() => setExpanded(!expanded)}>{readToggleText}</a> : null }
                         </p> 
                     </>

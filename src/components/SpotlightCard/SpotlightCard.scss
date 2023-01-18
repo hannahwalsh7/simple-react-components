@@ -9,37 +9,29 @@
     display: flex;
     flex-direction: column;
 
+    @media screen and (min-width: 768px) {
+      width: 80%;
+      flex-direction: row;
+    }
+
     &-half-width {
       @media screen and (min-width: 768px) {
         width: 40%;
         flex-direction: column;
       }
-    }
-  
-    &-regular {
-      @media screen and (min-width: 768px) {
-        width: 80%;
-        flex-direction: row;
-      }
-    }
-  
-    img {
-        display: inline-block;
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-        border: 4px dotted #DD0031;
-        margin-top: 50px;
 
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: cover;
-  
+      #container {
         @media screen and (min-width: 768px) {
-            width: 250px;
-            height: 250px;
-            border: 6px dotted #DD0031;
+          width: 100%;
+          text-align: center;
         }
+      }
+
+      #content-p {
+        @media screen and (min-width: 768px) {
+          margin: 30px 15px 20px 15px;  
+        }
+      }
     }
   
     &__content {
@@ -53,22 +45,19 @@
             min-height: 200px;
             text-align: center;
 
-            &-half-width{
-              @media screen and (min-width: 768px) {
-                width: 100%;
-                text-align: center;
-              }
+            @media screen and (min-width: 768px) {
+              width: 55%;
+              min-height: 300px;
+              float: right;
+              text-align: left;
             }
-            
-            &-regular {
-              @media screen and (min-width: 768px) {
-                width: 55%;
-                min-height: 300px;
-                float: right;
-                text-align: left;
-              }
-            }
-            
+
+            // &-half-width{
+            //   @media screen and (min-width: 768px) {
+            //     width: 100%;
+            //     text-align: center;
+            //   }
+            // }
         }
   
         &-title {
@@ -99,19 +88,17 @@
           font-size: 14px;
           line-height: 24px;
           margin: 30px 15px 20px 15px;
-          
-          &-half-width{
-            @media screen and (min-width: 768px) {
-              margin: 30px 15px 20px 15px;  
-            }
-          }
 
-          &-regular {
-            @media screen and (min-width: 768px) {
-              margin: 30px 50px 20px 0px;
-              font-size: 18px;
-            }
+          @media screen and (min-width: 768px) {
+            margin: 30px 50px 20px 0px;
+            font-size: 18px;
           }
+          
+          // &-half-width{
+          //   @media screen and (min-width: 768px) {
+          //     margin: 30px 15px 20px 15px;  
+          //   }
+          // }
         }
 
         a {
@@ -130,19 +117,17 @@
         float: left;
         text-align: center;
 
-        &-half-width {
-          @media screen and (min-width: 768px) {
-            width: 100%;
-            text-align: center;
-          }
+        @media screen and (min-width: 768px) {
+          width: 45%;
+          min-height: 300px;
         }
 
-        &-regular {
-          @media screen and (min-width: 768px) {
-            width: 45%;
-            min-height: 300px;
-          }
-        }
+        // &-half-width {
+        //   @media screen and (min-width: 768px) {
+        //     width: 100%;
+        //     text-align: center;
+        //   }
+        // }
     }
 }
   
@@ -176,5 +161,22 @@
     @media screen and (max-width: 767px) {
         margin-bottom: 8px !important;
     }
+}
+
+.team-member-profile-image {
+  margin: 0 auto;
+  margin-top: 50px;
+
+  @media screen and (min-width: 768px) {
+    width: 250px !important;
+    height: 250px !important;
+  }
+
+  &__img {
+    @media screen and (min-width: 768px) {
+      width: 219px !important;
+      height: 219px !important;
+    }
+  }
 }
   
