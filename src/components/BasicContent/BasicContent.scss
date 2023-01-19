@@ -1,16 +1,29 @@
-.basic-content-container {
+.basic-content {
     max-width: 100%;
     width: 100%;
+    height: max-content;
     font-family: 'Apercu Pro', 'Lato', sans-serif;
     font-style: normal;
     padding: 20px 0px 20px 0px;
 
-    &-content-styling {
-        padding: 0px 15px 0px 15px;
+    &-container {
+        display: flex;
+        flex-direction: column;
 
         @media screen and (min-width: 768px) {
-            margin-left: 15%;
-            margin-right: 15%;
+            flex-direction: row;
+        }
+
+    }
+
+    &-content {
+        @media screen and (min-width: 768px) {
+            float: right;
+            width: 50%;
+        }
+
+        &-styling {
+            padding: 0px 15px 0px 15px;
         }
     }
 
@@ -18,15 +31,11 @@
         padding: 0px 15px 15px 15px;
     }
 
-    &-img {
-        padding: 0px 15px 15px 15px;
-        
-        // @media screen and (min-width: 768px) {
-        //     float: left;
-        //     width: 50%;
-        //     padding: 0;
-        //     margin-right: 30px;
-        // }
+    &-img {        
+        @media screen and (min-width: 768px) {
+            float: left;
+            width: 50%;
+        }
     }
 
     h2 {
@@ -40,28 +49,37 @@
     p {
         color: #5b6770;
     }
+
+    .basic-video {
+        width: 100% !important;
+    
+        @media screen and (min-width: 768px) {
+            max-width: 100% !important;
+        }
+    
+        iframe {
+            width: 100% !important;
+    
+            @media screen and (min-width: 768px) {
+                max-width: 100% !important;
+            }
+        }
+    }
+    
+    .basic-image {
+        margin: 0px 15px 0px 15px !important;
+    
+        @media screen and (min-width: 768px) {
+            margin: 0px 0px 0px 15px !important;
+        }
+    }
 }
 
+// NOTE: Background settings should be refactored to use global bacground classes/variables from CFA component library
 .bg-white {
     background-color: #FFFFFF;  
 }
 
 .bg-tan {
     background-color: #F5E3CC66;
-}
-
-.basic-video {
-    width: 100% !important;
-
-    @media screen and (min-width: 768px) {
-        max-width: 100% !important;
-    }
-
-    iframe {
-        width: 100% !important;
-
-        @media screen and (min-width: 768px) {
-            max-width: 100% !important;
-        }
-    }
 }

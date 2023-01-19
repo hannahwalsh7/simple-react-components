@@ -40,18 +40,9 @@ const BasicContent = (props: BasicContentProps) => {
     const subsectionDescription = props.subsectionDescription !== undefined ? props.subsectionDescription : loremIpsum;
 
     return (
-        <div className={`basic-content-container ${backgroundColor}`}>
-            {props.image ? 
-                <div className='basic-content-container-img'>
-                    <BasicImage 
-                        image={props.image}
-                        imageAltText={props.imageAltText}
-                    />
-                </div>
-            : null}
-
+        <div className={`basic-content ${backgroundColor}`}>
             {props.video ? 
-                <div className='basic-content-container-video'>
+                <div className='basic-content-video'>
                     <BasicVideo 
                         embedId={props.video}
                         videoTitle={props.videoTitle}
@@ -63,22 +54,35 @@ const BasicContent = (props: BasicContentProps) => {
                 </div>
             : null}
 
-            <h2 className='basic-content-container-content-styling'>{title}</h2>
-            <p className='basic-content-container-content-styling'>{subtitle}</p>
-            <h3 className='basic-content-container-content-styling'>{subsectionHeader}</h3>
-            <p className='basic-content-container-content-styling'>{subsectionDescription}</p>
-            
-            {props.CTAlabel ? 
-                <div className='basic-content-container-content-styling'>
-                    {/* NOTE: default styling is incorrect per AC, will be fixed when we use the CTA component */}
-                    <Button 
-                        label={props.CTAlabel} 
-                        type={props.CTAtype} 
-                        color={props.CTAcolor} 
-                        url={props.CTAurl}
-                    />
+            <div className='basic-content-container'>
+                {props.image ? 
+                    <div className='basic-content-img'>
+                        <BasicImage 
+                            image={props.image}
+                            imageAltText={props.imageAltText}
+                        />
+                    </div>
+                : null}
+
+                <div className='basic-content-content'>
+                    <h2 className='basic-content-content-styling'>{title}</h2>
+                    <p className='basic-content-content-styling'>{subtitle}</p>
+                    <h3 className='basic-content-content-styling'>{subsectionHeader}</h3>
+                    <p className='basic-content-content-styling'>{subsectionDescription}</p>
+                    
+                    {props.CTAlabel ? 
+                        <div className='basic-content-content-styling'>
+                            {/* NOTE: default styling is incorrect per AC, will be fixed when we use the CTA component */}
+                            <Button 
+                                label={props.CTAlabel} 
+                                type={props.CTAtype} 
+                                color={props.CTAcolor} 
+                                url={props.CTAurl}
+                            />
+                        </div>
+                    : null}
                 </div>
-            : null}
+            </div>
         </div>
     );
 };
