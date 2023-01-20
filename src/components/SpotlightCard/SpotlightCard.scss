@@ -6,37 +6,46 @@
     max-width: 100%;
     width: 100%;
     margin: 0 auto;
+    padding: 18px 0px 36px 0px;
     display: flex;
     flex-direction: column;
 
     @media screen and (min-width: 768px) {
-      width: 80%;
+      width: 796px;
       flex-direction: row;
     }
 
     &-half-width {
       @media screen and (min-width: 768px) {
-        width: 40%;
+        width: 416px;
         flex-direction: column;
       }
 
       .spotlight-card__content-container {
         @media screen and (min-width: 768px) {
           width: 100%;
+          min-height: fit-content;
           text-align: center;
+          display: inline;
         }
       }
 
       .spotlight-card__img-container {
         @media screen and (min-width: 768px) {
           width: 100%;
-          text-align: center;
         }
       }
 
       .spotlight-card__content-p {
         @media screen and (min-width: 768px) {
-          margin: 30px 15px 20px 15px;  
+          margin: 0px 30px 0px 30px;  
+        }
+      }
+
+      .team-member-profile-image {
+        @media screen and (min-width: 768px) {
+          margin: 0 auto !important;
+          margin-top: 18px !important;
         }
       }
     }
@@ -45,7 +54,6 @@
       color: #5b6770;
       font-family: 'Apercu Pro', 'Lato', sans-serif;
       font-style: normal;
-      margin-bottom: 50px;
 
         &-container {
             width: 100%;
@@ -54,17 +62,18 @@
 
             @media screen and (min-width: 768px) {
               width: 55%;
-              min-height: 300px;
+              min-height: 365px;
               float: right;
               text-align: left;
+              display: flex;
+              align-items: center;
             }
         }
   
         &-title {
           font-weight: 700;
-          font-size: 28px;
-          line-height: 16px;
-          margin-top: 50px;
+          font-size: 16px;
+          line-height: 24px;
           color: #dd0031;
 
           @media screen and (min-width: 768px) {
@@ -73,10 +82,9 @@
         }
     
         h3 {
-          font-weight: 400;
-          font-size: 18px;
-          line-height: 12px;
-          margin-top: 0px;
+          font-weight: 700;
+          font-size: 12px;
+          line-height: 16px;
 
           @media screen and (min-width: 768px) {
               font-size: 22px;
@@ -87,49 +95,53 @@
           font-weight: 400;
           font-size: 14px;
           line-height: 24px;
-          margin: 30px 15px 20px 15px;
+          margin: 0px 30px 0px 30px;
 
           @media screen and (min-width: 768px) {
-            margin: 30px 50px 20px 0px;
+            margin: 0px 56px 0px 0px;
             font-size: 18px;
           }
         }
 
         a {
           color: #004f71;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 24px;
         }
 
         a:hover {
           font-weight: bolder;
           cursor: pointer;
         }
+
+        
     }
 
     &__img-container {
         width: 100%;
         min-height: 200px;
-        float: left;
         text-align: center;
+        overflow: auto;
 
         @media screen and (min-width: 768px) {
           width: 45%;
-          min-height: 300px;
         }
     }
 
     .team-member-profile-image {
       margin: 0 auto;
-      margin-top: 50px;
     
       @media screen and (min-width: 768px) {
-        width: 250px !important;
-        height: 250px !important;
+        width: 267px;
+        height: 266px;
+        margin: 30px 0px 14px 56px;
       }
     
       &__img {
         @media screen and (min-width: 768px) {
-          width: 219px !important;
-          height: 219px !important;
+          width: 236px;
+          height: 235px;
         }
       }
     }
