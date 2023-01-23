@@ -31,14 +31,8 @@ export interface BasicContentProps {
 }
 
 const BasicContent = (props: BasicContentProps) => {
-    const loremIpsum = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.';
-
     const backgroundColor = props.backgroundColor !== undefined ? props.backgroundColor : 'bg-white';
-    const title = props.title !== undefined ? props.title : 'Content Header';
-    const subtitle = props.subtitle !== undefined ? props.subtitle : loremIpsum;
-    const subsectionHeader = props.subsectionHeader !== undefined ? props.subsectionHeader : loremIpsum;
-    const subsectionDescription = props.subsectionDescription !== undefined ? props.subsectionDescription : loremIpsum;
-
+    
     return (
         <div className={`basic-content ${backgroundColor}`}>
             {props.video ? 
@@ -65,13 +59,13 @@ const BasicContent = (props: BasicContentProps) => {
                 : null}
 
                 <div className='basic-content-content'>
-                    <h2 className='basic-content-content-styling'>{title}</h2>
-                    <p className='basic-content-content-styling'>{subtitle}</p>
-                    <h3 className='basic-content-content-styling'>{subsectionHeader}</h3>
-                    <p className='basic-content-content-styling'>{subsectionDescription}</p>
+                    {props.title!==undefined ? <h2 className='basic-content-content-styling'>{props.title}</h2> : null}
+                    {props.subtitle!==undefined ? <p className='basic-content-content-styling'>{props.subtitle}</p> :  null}
+                    {props.subsectionHeader!==undefined ? <h3 className='basic-content-content-styling'>{props.subsectionHeader}</h3> : null}
+                    {props.subsectionDescription!==undefined ? <p className='basic-content-content-styling'>{props.subsectionDescription}</p> : null}
                     
                     {props.CTAlabel ? 
-                        <div className='basic-content-content-styling'>
+                        <div className='basic-content-content-styling basic-content-cta'>
                             {/* NOTE: default styling is incorrect per AC, will be fixed when we use the CTA component */}
                             <Button 
                                 label={props.CTAlabel} 
