@@ -50,13 +50,13 @@ const BasicContent = (props: BasicContentProps) => {
 
             <div className='basic-content-container'>
                 {props.image ? 
-                    <div className='basic-content-img'>
+                    <div className='basic-content__image'>
                         <BasicImage 
                             image={props.image}
                             imageAltText={props.imageAltText}
                         />
                     </div>
-                : null}
+                : ''}
 
                 <div className='basic-content-content'>
                     {props.title!==undefined ? <h2 className='basic-content-content-styling'>{props.title}</h2> : null}
